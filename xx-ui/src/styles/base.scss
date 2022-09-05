@@ -1,0 +1,13 @@
+// 一般来说，js 和 css 是完全分离的，之所以要多引一层是为了方便后续使用按需加载的插件，自动关联 js 和 css
+// 这里主要放的是全局变量
+@import './color.scss';
+@import './font.scss';
+
+$borderRadius: 7px;
+
+$smallPaddingTop: 2px;
+$smallPaddingLeft: 5px;
+$defaultPaddingTop: 5px;
+$defaultPaddingLeft: 10px;
+$largePaddingTop: 9px;
+$largePaddingLeft: 14px;

@@ -1,0 +1,52 @@
+{
+  "name": "@xx/ui",
+  "version": "1.0.2",
+  "description": "",
+  "//": "开发者使用时的入口文件，可以用 common 文件收敛，内部判断环境再引入不同文件",
+  "main": "lib/index.js",
+  "//": "构建后公开的⽂件夹，隐藏开发时的配置信息",
+  "files": [
+    "lib",
+    "src",
+    "packages",
+    "example"
+  ],
+  "scripts": {
+    "start": "webpack server --config webpack.dev.js --color --progress --hot",
+    "build": "webpack --config webpack.prod.js --color --progress && npm run build:style",
+    "//": "构建本地 tgz 包，得先 build",
+    "pack": "npm pack",
+    "//": "修改 version 版本",
+    "patch": "npm version patch -m",
+    "build:style": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.2.38"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "css-loader": "^6.7.1",
+    "cssnano": "^5.1.13",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.16",
+    "sass": "^1.54.8",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "vue": "^3.2.38",
+    "vue-loader": "^17.0.0",
+    "vue-template-compiler": "^2.7.10",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.1"
+  }
+}
